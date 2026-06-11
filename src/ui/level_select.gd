@@ -22,8 +22,6 @@ func _ready() -> void:
 	_build_ui()
 
 func _build_ui() -> void:
-	set_anchors_preset(Control.PRESET_FULL_RECT)
-
 	var background := ColorRect.new()
 	background.color = Color("1d2233")
 	background.set_anchors_preset(Control.PRESET_FULL_RECT)
