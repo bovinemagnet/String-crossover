@@ -11,6 +11,7 @@ config/description="A relaxing puzzle game about weaving coloured strings across
 config/version="0.0.0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+run/main_scene="res://src/ui/main_menu.tscn"
 
 [autoload]
 

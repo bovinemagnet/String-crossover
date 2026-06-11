@@ -3,11 +3,19 @@ extends "res://tests/unit/test_base.gd"
 ## Headless integration check: the game scene builds, wires the core
 ## systems together, and the win flow records progress.
 
+const SaveManager = preload("res://src/core/save_manager.gd")
+
 const SAVE_PATH := "user://test_game_save.json"
 
 func before_each() -> void:
 	if FileAccess.file_exists(SAVE_PATH):
 		DirAccess.remove_absolute(SAVE_PATH)
+	# Point the GameSession autoload (when present) at a throwaway save so
+	# scene tests never touch the player's real progress.
+	var session: Node = Engine.get_main_loop().root.get_node_or_null("/root/GameSession")
+	if session != null:
+		session.save_manager = SaveManager.new(SAVE_PATH)
+		session.level_id = "w1_l01"
 
 func test_game_scene_loads_and_wins() -> void:
 	var scene: PackedScene = load("res://src/game/game.tscn")
