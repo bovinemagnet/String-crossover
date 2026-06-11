@@ -13,8 +13,8 @@ func _initialize() -> void:
 
 	for script_path in _discover_test_scripts():
 		var script: GDScript = load(script_path)
-		if script == null:
-			all_failures.append("%s: failed to load" % script_path)
+		if script == null or not script.can_instantiate():
+			all_failures.append("%s: failed to load/compile" % script_path)
 			continue
 		var instance: Object = script.new()
 		for method in script.get_script_method_list():
@@ -24,7 +24,10 @@ func _initialize() -> void:
 			total_tests += 1
 			instance._current_test = "%s::%s" % [script_path.get_file(), method_name]
 			instance.before_each()
+			var assertions_before: int = instance.assertions
 			instance.call(method_name)
+			if instance.assertions == assertions_before:
+				instance.failures.append("%s: made no assertions (runtime error?)" % instance._current_test)
 		total_assertions += instance.assertions
 		all_failures.append_array(instance.failures)
 
