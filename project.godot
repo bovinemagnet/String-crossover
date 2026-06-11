@@ -12,6 +12,10 @@ config/version="0.0.0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameSession="*res://src/game/game_session.gd"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

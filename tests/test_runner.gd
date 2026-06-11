@@ -7,6 +7,11 @@ extends SceneTree
 const TEST_DIR := "res://tests/unit/"
 
 func _initialize() -> void:
+	# Defer to the first processed frame so the root window is live and
+	# scene instantiation (add_child -> _ready) behaves normally.
+	process_frame.connect(_run_all, CONNECT_ONE_SHOT)
+
+func _run_all() -> void:
 	var total_tests := 0
 	var total_assertions := 0
 	var all_failures: Array[String] = []
