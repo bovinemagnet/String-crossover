@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+
+config_version=5
+
+[application]
+
+config/name="Cross Over Strings"
+config/description="A relaxing puzzle game about weaving coloured strings across a board."
+config/version="0.0.0"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+run/main_scene="res://src/ui/main_menu.tscn"
+
+[autoload]
+
+GameSession="*res://src/game/game_session.gd"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
