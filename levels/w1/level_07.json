@@ -1,9 +1,9 @@
 {
-  "id": "w1_l01",
-  "name": "First Steps",
+  "id": "w1_l07",
+  "name": "Over and Under",
   "grid": {
     "width": 5,
-    "height": 3
+    "height": 5
   },
   "endpoints": [
     {
@@ -11,11 +11,11 @@
       "cells": [
         [
           0,
-          0
+          1
         ],
         [
           4,
-          0
+          3
         ]
       ]
     },
@@ -34,29 +34,42 @@
     }
   ],
   "obstacles": [],
-  "crossings": [],
-  "par_length": 8,
+  "crossings": [
+    [
+      2,
+      2
+    ]
+  ],
+  "par_length": 10,
   "solution": {
     "red": [
       [
         0,
-        0
+        1
       ],
       [
         1,
-        0
+        1
       ],
       [
         2,
-        0
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
       ],
       [
         3,
-        0
+        3
       ],
       [
         4,
-        0
+        3
       ]
     ],
     "blue": [

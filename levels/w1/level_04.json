@@ -1,9 +1,9 @@
 {
-  "id": "w1_l01",
-  "name": "First Steps",
+  "id": "w1_l04",
+  "name": "First Crossing",
   "grid": {
     "width": 5,
-    "height": 3
+    "height": 5
   },
   "endpoints": [
     {
@@ -11,11 +11,11 @@
       "cells": [
         [
           0,
-          0
+          2
         ],
         [
           4,
-          0
+          2
         ]
       ]
     },
@@ -23,62 +23,67 @@
       "color": "blue",
       "cells": [
         [
-          0,
-          2
+          2,
+          0
         ],
         [
-          4,
-          2
+          2,
+          4
         ]
       ]
     }
   ],
   "obstacles": [],
-  "crossings": [],
+  "crossings": [
+    [
+      2,
+      2
+    ]
+  ],
   "par_length": 8,
   "solution": {
     "red": [
       [
         0,
-        0
+        2
       ],
       [
         1,
-        0
+        2
       ],
       [
         2,
-        0
+        2
       ],
       [
         3,
-        0
+        2
       ],
       [
         4,
-        0
+        2
       ]
     ],
     "blue": [
       [
-        0,
-        2
+        2,
+        0
       ],
       [
-        1,
-        2
+        2,
+        1
       ],
       [
         2,
         2
       ],
       [
-        3,
-        2
+        2,
+        3
       ],
       [
-        4,
-        2
+        2,
+        4
       ]
     ]
   }

@@ -1,9 +1,9 @@
 {
-  "id": "w1_l01",
-  "name": "First Steps",
+  "id": "w1_l02",
+  "name": "Three Lanes",
   "grid": {
     "width": 5,
-    "height": 3
+    "height": 5
   },
   "endpoints": [
     {
@@ -31,11 +31,24 @@
           2
         ]
       ]
+    },
+    {
+      "color": "green",
+      "cells": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ]
     }
   ],
   "obstacles": [],
   "crossings": [],
-  "par_length": 8,
+  "par_length": 12,
   "solution": {
     "red": [
       [
@@ -79,6 +92,28 @@
       [
         4,
         2
+      ]
+    ],
+    "green": [
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        4
       ]
     ]
   }
